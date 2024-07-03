@@ -1,30 +1,24 @@
 <script setup lang="ts">
-import {RouterLink, RouterView} from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
   <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Auth</RouterLink>
-        <RouterLink to="/registration">Registration</RouterLink>
-        <RouterLink to="/user">user</RouterLink>
-      </nav>
-    </div>
+    <nav>
+      <RouterLink to="/">Auth</RouterLink>
+      <RouterLink to="/registration">Registration</RouterLink>
+      <RouterLink to="/user">User</RouterLink>
+    </nav>
   </header>
 
-  <RouterView/>
+  <RouterView />
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+  display: flex;
 }
 
 nav {
@@ -32,10 +26,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
+  display: flex;
 }
 
 nav a.router-link-exact-active:hover {
@@ -45,7 +36,7 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  border-left: 1px solid red;
 }
 
 nav a:first-of-type {
@@ -56,11 +47,6 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
   }
 
   header .wrapper {
